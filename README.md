@@ -3,7 +3,7 @@
 So sánh mô hình đơn biến (Linear, NLinear, DLinear), mô hình lai NLinear + DLinear và mô hình lai đa biến trên giá dầu WTI,
 đánh giá walk-forward và kiểm định Diebold–Mariano, kèm ứng dụng demo và chức năng dự đoán thử một ngày bất kỳ.
 
-- **Tác giả:** NGUYỄN CÔNG HOÀNG VŨ, ĐỖ DUẪn | **Học phần / lớp:** Cấu trúc dữ liệu |25DKHA1 | **Giảng viên hướng dẫn:** [điền]
+- **Tác giả:** NGUYỄN CÔNG HOÀNG VŨ, ĐỖ DUẪN | **Học phần / lớp:** Cấu trúc dữ liệu - 25DKHA1 
 - **Nền tảng:** đề bài *Forecasting with DLinear and NLinear Models* (AI VIET NAM, AIO 2026) và bài báo Zeng và cộng sự (2023).
 
 > **Kết quả chính:** trên WTI, dự báo 5 phiên, các mô hình tuyến tính **không vượt được naive** (giữ nguyên giá đóng cửa
@@ -25,7 +25,7 @@ Chi tiết từng mục, cách lấy và cách kiểm tra: **[`docs/SETUP_CONFIG
 | Python 3.10+ | Có | Khuyến nghị dùng môi trường ảo |
 | **Khoá FRED API** (miễn phí) | **Có**, để tải dữ liệu | Điền vào file `.env` (sao chép từ `.env.example`) |
 | Internet | Có, ở bước tải dữ liệu và cài thư viện | |
-| Điền tên tác giả vào dòng đầu README | Không | |
+
 
 ## 2. Cài đặt
 
