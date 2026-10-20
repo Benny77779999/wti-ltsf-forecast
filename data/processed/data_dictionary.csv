@@ -1,0 +1,23 @@
+column,dtype,fred_id,lag_phien,description
+wti,float64,DCOILWTICO,0,Giá spot WTI Cushing (USD/thùng) - biến mục tiêu
+brent,float64,DCOILBRENTEU,0,Giá spot Brent (USD/thùng)
+usdcad,float64,DEXCAUS,0,Tỷ giá CAD trên mỗi USD
+usd_broad,float64,DTWEXBGS,0,Chỉ số USD broad của Fed
+ovx,float64,OVXCLS,1,Biến động ngụ ý của dầu (OVX)
+fed_funds,float64,DFF,1,Lãi suất FED hiệu dụng (%)
+wti_diff,float64,,,Thay đổi giá WTI so với phiên trước (USD)
+wti_logret,float64,,,Log-return WTI (NaN khi giá <= 0)
+brent_logret,float64,,,Log-return Brent
+spread_brent_wti,float64,,,Brent - WTI (USD)
+spread_diff,float64,,,Thay đổi spread Brent-WTI so với phiên trước
+usdcad_logret,float64,,,Log-return USD/CAD
+usd_broad_logret,float64,,,Log-return chỉ số USD broad
+ovx_diff,float64,,,Thay đổi OVX so với phiên trước
+fed_diff,float64,,,Thay đổi lãi suất FED so với phiên trước
+flag_nonpositive,bool,,,Giá WTI <= 0
+flag_jump,bool,,,Biến động 1 ngày vượt ngưỡng hoặc liên quan giá không dương
+wti_run_length,int64,,,Độ dài đoạn giá WTI lặp liên tiếp
+flag_stale_run,bool,,,Đoạn lặp giá >= ngưỡng (nghi lỗi nguồn)
+is_excluded,bool,,,Thuộc giai đoạn bị loại (giá âm 2020)
+is_buffer,bool,,,"Thuộc giai đoạn đệm, trước study_start"
+gap_before,bool,,,Phiên liền trước cách quá max_gap_days ngày lịch (đoạn thiếu dữ liệu)

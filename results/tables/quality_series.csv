@@ -1,0 +1,7 @@
+series,fred_id,raw_non_null,raw_first,raw_last,missing_on_wti_calendar_before,missing_after_align_and_lag
+wti,DCOILWTICO,4649,2008-01-02,2026-09-30,0,0
+brent,DCOILBRENTEU,4741,2008-01-02,2026-09-30,42,0
+usdcad,DEXCAUS,4693,2008-01-02,2026-09-30,38,0
+usd_broad,DTWEXBGS,4681,2008-01-01,2026-09-30,57,1
+ovx,OVXCLS,4718,2008-01-02,2026-09-30,3,1
+fed_funds,DFF,6848,2008-01-01,2026-09-30,0,1

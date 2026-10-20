@@ -1,0 +1,11 @@
+,value
+n_trading_days,4649
+first_date,2008-01-02 00:00:00
+last_date,2026-09-30 00:00:00
+n_wti_nonpositive,1
+n_jump_flags,19
+n_stale_run_days,0
+n_gaps_over_threshold,8
+n_excluded_days,85
+n_buffer_days,503
+n_usable_study_days,4061

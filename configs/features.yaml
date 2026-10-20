@@ -1,0 +1,5 @@
+# Biến lịch (biết trước)
+# File ngày họp FOMC: 1 cột `date` = ngày công bố quyết định lãi suất. Bạn tự điền từ
+# federalreserve.gov (mục FOMC calendars / historical materials). Chưa có file thì bỏ qua biến này.
+fomc_dates_file: data/raw/fomc_dates.csv
+near_expiry_days: 5      # <= số phiên này tới ngày đáo hạn hợp đồng CL thì near_expiry = 1

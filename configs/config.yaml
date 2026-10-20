@@ -1,0 +1,48 @@
+# ==== Cấu hình dữ liệu cho đồ án dự báo WTI ====
+# Các mã FRED dưới đây cần được đối chiếu trên trang FRED trước khi tải.
+
+paths:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  tables_dir: results/tables
+
+data:
+  target: wti
+  download_start: "2008-01-01"   # gồm 2 năm đệm cho cửa sổ look-back
+  study_start: "2010-01-01"      # trước mốc này chỉ để làm đệm, không train/đánh giá
+  end_date: "2026-09-30"        # cắt ở mốc chung: tỷ giá (H.10) công bố trễ vài ngày
+
+  fred_series:
+    wti: DCOILWTICO        # WTI spot, USD/thùng (mục tiêu)
+    brent: DCOILBRENTEU    # Brent spot
+    usdcad: DEXCAUS        # CAD trên mỗi USD
+    usd_broad: DTWEXBGS    # Chỉ số USD broad của Fed
+    ovx: OVXCLS            # Biến động ngụ ý của dầu
+    fed_funds: DFF         # Lãi suất FED hiệu dụng (thử nghiệm)
+
+  # Số phiên giao dịch làm trễ cho từng biến (chống rò rỉ thời gian).
+  # 0 = dùng cùng ngày; 1 = chỉ dùng giá của phiên trước.
+  lag_rules:
+    wti: 0
+    brent: 0
+    usdcad: 0
+    usd_broad: 0
+    ovx: 1
+    fed_funds: 1
+
+  # Điền khuyết: chỉ lấy quan sát gần nhất TRƯỚC đó, và bỏ nếu cũ hơn số ngày này
+  max_stale_days: 5
+
+  # Giai đoạn bị loại khỏi train/đánh giá (giá âm 20/4/2020)
+  exclusion_window:
+    start: "2020-03-01"
+    end: "2020-06-30"
+
+  # Khoảng trống dữ liệu: cặp phiên liên tiếp cách nhau quá số ngày lịch này bị coi là có đoạn thiếu,
+  # cửa sổ trượt không được chạy qua đoạn đó.
+  max_gap_days: 5
+
+  # Kiểm tra chất lượng
+  jump_threshold: 0.15        # biến động 1 ngày vượt ngưỡng này bị gắn cờ
+  repeat_run_threshold: 4     # số ngày giá lặp liên tiếp bị gắn cờ

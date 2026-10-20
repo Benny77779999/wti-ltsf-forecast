@@ -1,0 +1,20 @@
+# Cấu hình thí nghiệm
+seeds: 5
+epochs: 50
+lr: 0.001
+batch_size: 32
+moving_avg: 5
+
+# Nhóm biến phụ trợ (kênh đưa vào mô hình C). Kênh 0 luôn là wti_log.
+feature_groups:
+  spread: [spread_brent_wti]
+  usd:    [usdcad_log, usd_broad_log]
+  ovx:    [ovx]
+  fed:    [fed_funds]       # nhóm thử nghiệm, kỳ vọng thấp
+
+# Chạy mỗi nhóm C với/không có nhánh "mức hiện tại" (ablation)
+level_branch_variants: [false, true]
+
+# Cải tiến vòng 1: khởi tạo 0 + weight decay chọn trên validation, và co dự báo về naive
+improve1:
+  wd_grid: [0.0, 0.01, 0.1, 1.0]

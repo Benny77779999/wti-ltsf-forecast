@@ -1,0 +1,15 @@
+# Cấu hình cho chức năng "dự đoán thử một ngày bất kỳ" (app tab 2 và predict_day.py)
+default_model: nlinear
+default_L: 30
+min_L: 2                    # số phiên quá khứ tối thiểu người dùng được chọn
+max_L: 240
+default_seed: 0
+cache_dir: saved_models/live   # mô hình đã huấn luyện được lưu lại để dùng lại cho cùng ngày/cấu hình
+device: cpu                    # cpu | cuda | auto
+
+# Huấn luyện và lưu toàn bộ mô hình (train_all.py)
+store:
+  dir: saved_models
+  windows: [5, 30, 120]                 # các L được huấn luyện sẵn
+  cutoffs: ["2025-12-31", "last"]       # huấn luyện đến ngày này; "last" = toàn bộ dữ liệu
+  seed: 0

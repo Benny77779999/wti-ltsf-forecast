@@ -1,0 +1,9 @@
+# Thiết kế walk-forward (expanding window)
+horizon: 5                       # T
+main_windows: [5, 30, 120]       # L chính
+supplementary_windows: [480]     # L=480 chạy bổ sung (mất mẫu 2020-2022, một số fold bị bỏ)
+train_start: "2010-01-01"
+test_years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+val_samples: 250                 # ~1 năm mẫu ngay trước test (sau khi purge)
+min_train_samples: 500
+min_test_samples: 50             # fold test ít mẫu hơn mức này bị bỏ và ghi vào báo cáo
