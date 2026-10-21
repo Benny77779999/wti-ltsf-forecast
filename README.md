@@ -252,7 +252,10 @@ dữ liệu train là thăm dò; biến lịch (`src/features.py`) đã viết n
 **Hướng phát triển:** khoảng dự báo (phân vị) theo độ biến động; dữ liệu mới (đường cong kỳ hạn futures, tồn kho EIA) với
 quy tắc thời điểm chặt chẽ; biến lịch; dùng futures thay spot; thành phần phi tuyến nhỏ; khung giờ (1 giờ, 4 giờ); kết hợp model NLP để nhận biết tin tức ảnh hưởng đến giá.
 
-**Tài liệu tham khảo:** A. Zeng et al., *Are transformers effective for time series forecasting?*, AAAI 2023 · H. Wu et al.,
-*Autoformer*, NeurIPS 2021 · F. X. Diebold, R. S. Mariano, *Comparing predictive accuracy*, JBES 1995 · D. Harvey, S. Leybourne,
-P. Newbold, *Testing the equality of prediction mean squared errors*, IJF 1997 (hãy kiểm tra lại thông tin trích dẫn trước
-khi dùng) · Dữ liệu: FRED, Federal Reserve Bank of St. Louis (nguồn gốc từng chuỗi ghi trên trang của chuỗi).
+**Tài liệu tham khảo:** 
+· *Forecasting with DLinear and NLinear Models* (AI VIET NAM, AIO 2026)
+· A. Zeng et al., *Are transformers effective for time series forecasting?*, AAAI 2023 
+· H. Wu et al., *Autoformer*, NeurIPS 2021 
+· F. X. Diebold, R. S. Mariano, *Comparing predictive accuracy*, JBES 1995 
+· D. Harvey, S. Leybourne,P. Newbold, *Testing the equality of prediction mean squared errors*, IJF 1997  
+· Dữ liệu: FRED, Federal Reserve Bank of St. Louis 
