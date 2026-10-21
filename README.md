@@ -4,7 +4,7 @@ So sánh mô hình đơn biến (Linear, NLinear, DLinear), mô hình lai NLinea
 đánh giá walk-forward và kiểm định Diebold–Mariano, kèm ứng dụng demo và chức năng dự đoán thử một ngày bất kỳ.
 
 - **Tác giả:** NGUYỄN CÔNG HOÀNG VŨ, ĐỖ DUẪN | **Học phần / lớp:** Cấu trúc dữ liệu - 25DKHA1 
-- **Nền tảng:** đề bài *Forecasting with DLinear and NLinear Models* (AI VIET NAM, AIO 2026) và bài báo Zeng và cộng sự (2023).
+- **Nền tảng:** đề bài *Forecasting with DLinear and NLinear Models* (AI VIET NAM, AIO 2026) | A. Zeng et al., *Are transformers effective for time series forecasting?*, AAAI 2023
 
 > **Kết quả chính:** trên WTI, dự báo 5 phiên, các mô hình tuyến tính **không vượt được naive** (giữ nguyên giá đóng cửa
 > gần nhất). NLinear và mô hình lai hoà với naive; thêm biến phụ trợ không giúp. Đây là kết quả âm được kiểm định, không
